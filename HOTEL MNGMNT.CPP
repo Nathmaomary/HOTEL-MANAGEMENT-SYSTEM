@@ -117,6 +117,15 @@ void Hotel::menu() {
         }
     } while (choice != 4);
 }
+void Hotel::showAvailableRooms() {
+    cout << "Available Rooms: " << endl;
+    for (auto& room : rooms) {
+        if (room.isAvailable) {
+            cout << "Room " << room.roomNumber << endl;
+        }
+    }
+}
+
 
 
 
