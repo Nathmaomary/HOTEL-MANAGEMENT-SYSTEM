@@ -125,6 +125,34 @@ void Hotel::showAvailableRooms() {
         }
     }
 }
+void Hotel::menu() {
+    int choice;
+    do {
+        cout << "1. Book Room" << endl;
+        cout << "2. Check Out" << endl;
+        cout << "3. Show Available Rooms" << endl;
+        cout << "4. Exit" << endl;
+        cin >> choice;
+
+        switch (choice) {
+        case 1:
+            bookRoom();
+            break;
+        case 2:
+            // code for check out
+            break;
+        case 3:
+            showAvailableRooms();
+            break;
+        case 4:
+            cout << "Exiting..." << endl;
+            break;
+        default:
+            cout << "Invalid option. Please try again." << endl;
+        }
+    } while (choice != 4);
+}
+
 
 
 
