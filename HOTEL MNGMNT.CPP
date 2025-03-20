@@ -41,4 +41,14 @@ void HotelManagement::displayMenu() {
         case 4: cout << "Exiting..." << endl; break;
     }
 }
+void Hotel::menu() {
+    cout << "Welcome to the Hotel Management System" << endl;
+    cout << "1. Book Room" << endl;
+    cout << "2. Check Out" << endl;
+    cout << "3. Show Available Rooms" << endl;
+    cout << "4. Exit" << endl;
+}
+
+
+
 
