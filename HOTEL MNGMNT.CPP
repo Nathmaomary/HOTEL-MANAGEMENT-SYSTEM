@@ -57,6 +57,18 @@ public:
 
     Room(int number) : roomNumber(number), isAvailable(true), customerName("") {}
 };
+class Hotel {
+private:
+    vector<Room> rooms;
+public:
+    Hotel(int numRooms) {
+        for (int i = 1; i <= numRooms; i++) {
+            rooms.push_back(Room(i));
+        }
+    }
+    void menu();
+};
+
 
 
 
