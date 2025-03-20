@@ -69,6 +69,28 @@ public:
     void menu();
 };
 
+void Hotel::bookRoom() {
+    int roomNumber;
+    string name;
+    cout << "Enter room number to book: ";
+    cin >> roomNumber;
+    cout << "Enter your name: ";
+    cin >> name;
+
+    if (roomNumber > 0 && roomNumber <= rooms.size()) {
+        if (rooms[roomNumber - 1].isAvailable) {
+            rooms[roomNumber - 1].isAvailable = false;
+            rooms[roomNumber - 1].customerName = name;
+            cout << "Room " << roomNumber << " has been booked for " << name << "." << endl;
+        } else {
+            cout << "Room is already booked." << endl;
+        }
+    } else {
+        cout << "Invalid room number." << endl;
+    }
+}
+
+
 
 
 
