@@ -227,6 +227,15 @@ Hotel::Hotel(int numRooms) {
     cout << "Hotel with " << numRooms << " rooms has been initialized." << endl;
 }
 
+void Hotel::feedback() {
+    string customerFeedback;
+    cout << "Please provide your feedback: ";
+    cin.ignore();
+    getline(cin, customerFeedback);
+    cout << "Thank you for your feedback!" << endl;
+}
+
+
 
 
 
