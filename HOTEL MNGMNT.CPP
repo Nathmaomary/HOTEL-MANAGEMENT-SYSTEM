@@ -49,6 +49,16 @@ void Hotel::menu() {
     cout << "4. Exit" << endl;
 }
 
+class Room {
+public:
+    int roomNumber;
+    bool isAvailable;
+    string customerName;
+
+    Room(int number) : roomNumber(number), isAvailable(true), customerName("") {}
+};
+
+
 
 
 
