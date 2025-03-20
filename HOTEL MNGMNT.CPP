@@ -267,6 +267,15 @@ void Hotel::menu() {
     } while (choice != 5);
 }
 
+Hotel::Hotel(int numRooms) {
+    rooms.clear();
+    for (int i = 1; i <= numRooms; i++) {
+        rooms.push_back(Room(i));
+    }
+    cout << "Hotel initialized with " << numRooms << " rooms." << endl;
+}
+
+
 
 
 
