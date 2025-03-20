@@ -216,6 +216,11 @@ void Hotel::checkOut() {
     }
 }
 
+Hotel::~Hotel() {
+    cout << "Hotel system is shutting down." << endl;
+}
+
+
 
 
 
