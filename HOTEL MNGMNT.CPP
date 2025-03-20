@@ -275,6 +275,27 @@ Hotel::Hotel(int numRooms) {
     cout << "Hotel initialized with " << numRooms << " rooms." << endl;
 }
 
+void Hotel::checkOut() {
+    int roomNumber;
+    cout << "Enter room number to check out: ";
+    cin >> roomNumber;
+
+    if (roomNumber < 1 || roomNumber > rooms.size()) {
+        cout << "Invalid room number." << endl;
+        return;
+    }
+
+    auto& room = rooms[roomNumber - 1];
+    if (!room.isAvailable) {
+        cout << "Room " << roomNumber << " checked out from " << room.customerName << endl;
+        room.isAvailable = true;
+        room.customerName.clear();
+    } else {
+        cout << "Room is already available." << endl;
+    }
+}
+
+
 
 
 
