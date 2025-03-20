@@ -153,6 +153,24 @@ void Hotel::menu() {
     } while (choice != 4);
 }
 
+void Hotel::checkOut() {
+    int roomNumber;
+    cout << "Enter room number to check out: ";
+    cin >> roomNumber;
+
+    if (roomNumber > 0 && roomNumber <= rooms.size()) {
+        if (!rooms[roomNumber - 1].isAvailable) {
+            rooms[roomNumber - 1].isAvailable = true;
+            cout << "Room " << roomNumber << " has been checked out successfully." << endl;
+        } else {
+            cout << "Room is already available." << endl;
+        }
+    } else {
+        cout << "Invalid room number." << endl;
+    }
+}
+
+
 
 
 
