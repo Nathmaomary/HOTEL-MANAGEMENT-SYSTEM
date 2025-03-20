@@ -220,6 +220,14 @@ Hotel::~Hotel() {
     cout << "Hotel system is shutting down." << endl;
 }
 
+Hotel::Hotel(int numRooms) {
+    for (int i = 1; i <= numRooms; i++) {
+        rooms.push_back(Room(i));
+    }
+    cout << "Hotel with " << numRooms << " rooms has been initialized." << endl;
+}
+
+
 
 
 
