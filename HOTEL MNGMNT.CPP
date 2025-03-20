@@ -295,6 +295,11 @@ void Hotel::checkOut() {
     }
 }
 
+void Hotel::logAction(const string& action) {
+    cout << "[LOG]: " << action << endl;
+}
+
+
 
 
 
